@@ -1,20 +1,17 @@
 package com.newsum.review;
 
+import com.newsum.core.BaseEntity;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 @Entity
-public class Review {
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private final Long id;
+public class Review extends BaseEntity {
+
   private int rating;
   private String description;
 
   protected Review(){
-    id = null;
+    super();
   }
 
   public int getRating() {

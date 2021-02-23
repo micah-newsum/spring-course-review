@@ -1,21 +1,17 @@
 package com.newsum.course;
 
+import com.newsum.core.BaseEntity;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 @Entity
-public class Course {
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private final Long id;
+public class Course extends BaseEntity {
   private String title;
   private String url;
 
   // zero parameter constructor required by JPA.
   protected Course(){
-    id = null;
+    super();
   }
 
   public Course(String title, String url) {
