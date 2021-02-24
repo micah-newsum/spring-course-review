@@ -37,7 +37,8 @@ public class DatabaseLoader implements ApplicationRunner {
         "Java 15",
         "Scala",
         "Groovy",
-        "Hibernate"
+        "Hibernate",
+        "Spring HATEOS"
     };
 
     List<Course> mockCourses = new ArrayList<>();
