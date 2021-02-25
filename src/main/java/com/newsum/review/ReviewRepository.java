@@ -6,10 +6,10 @@ import org.springframework.security.access.prepost.PreAuthorize;
 
 public interface ReviewRepository extends PagingAndSortingRepository<Review,Long> {
   @Override
-  @PreAuthorize("@reviewRepository.findOne(#id)?.reviewer?.username == authentication.name")
+  @PreAuthorize("hasRole('ROLE_ADMIN') or @reviewRepository.findOne(#id)?.reviewer?.username == authentication.name")
   void deleteById(@Param("id") Long id);
 
   @Override
-  @PreAuthorize("#review.reviewer?.username == authentication.name")
+  @PreAuthorize("hasRole('ROLE_ADMIN') or #review.reviewer?.username == authentication.name")
   void delete(@Param("review") Review review);
 }
