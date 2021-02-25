@@ -58,7 +58,7 @@ public class DatabaseLoader implements ApplicationRunner {
         new User("christophernowack", "Christopher",  "Nowack", "password", new String[] {"ROLE_USER"}),
         new User("calebkleveter", "Caleb",  "Kleveter", "password", new String[] {"ROLE_USER"}),
         new User("richdonellan", "Rich",  "Donnellan", "password", new String[] {"ROLE_USER"}),
-        new User("micah", "Newsum",  "mnewsum", "password", new String[] {"ROLE_USER","ROLE_ADMIN"}),
+        new User("mnewsum", "Newsum",  "Micah", "password", new String[] {"ROLE_USER","ROLE_ADMIN"}),
         new User("albertqerimi", "Albert",  "Qerimi", "password", new String[] {"ROLE_USER"})
     );
 
